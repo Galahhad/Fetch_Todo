@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Exo:400,700");
+* {
+  box-sizing: border-box;
+  font-family: "Exo", sans-serif;
+}
+.supreme {
+  max-width: 800px;
+  margin: 100px auto 0 auto;
+  text-align: center;
+}
+.add_form {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.add_input {
+  width: 650px;
+  height: 100%;
+  padding-left: 7px;
+  font-size: 25px;
+  border: 5px solid black;
+  border-radius: 10px;
+  transition: 0.4s;
+  background-color: inherit;
+}
+.add_input:active {
+  transform: scale(0.991);
+}
+.add_button {
+  width: 140px;
+  height: 100%;
+  border: 5px solid black;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: inherit;
+  text-transform: uppercase;
+  border-radius: 10px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.add_button:hover {
+  background-color: black;
+  color: white;
+}
+.add_button:active {
+  transform: scale(0.95);
+}
+.todo_wrap {
+  width: 760px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.4s;
+}
+.title {
+  width: 600px;
+  text-align: start;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+.delete_button {
+  width: 24px;
+  height: 24px;
+  background-color: inherit;
+  border: 3px solid black;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+}
+.delete_button::before {
+  position: absolute;
+  content: "x";
+  font-size: 18px;
+  top: -4px;
+  left: 4px;
+  opacity: 0;
+  transition: 0.4s;
+}
+.delete_button:hover::before {
+  opacity: 1;
+}
+.delete_button:active {
+  transform: scale(0.95);
+  background-color: red;
+}
+.error {
+  border: 3px solid red;
+  background-color: pink;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.checkbox {
+  display: none;
+}
+.checkmark {
+  width: 24px;
+  height: 24px;
+  border: 3px solid black;
+  border-radius: 7px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s;
+}
+.checkmark::before {
+  position: absolute;
+  content: "";
+  top: -20px;
+  left: 6px;
+  width: 3px;
+  height: 8px;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  transform: rotate(45deg);
+  transition: 0.4s;
+}
+.checkbox:checked ~ .checkmark::before {
+  top: 2px;
+  border-color: limegreen;
+}
+.checkmark:active {
+  transform: scale(0.95);
+}
