@@ -1,3 +1,14 @@
+const checktheme = document.querySelector(".checktheme");
+const link = document.querySelector("link");
+
+checktheme.addEventListener("change", () => {
+    if (checktheme.checked) {
+        link.setAttribute("href", "dark.css");
+    } else {
+        link.setAttribute("href", "style.css");
+    }
+})
+
 const fetchUrl = "https://jsonplaceholder.typicode.com/todos";
 async function getTodos() {
   try {
@@ -169,3 +180,4 @@ addForm.addEventListener("submit", (e) => {
     postTodo();
   }
 });
+
